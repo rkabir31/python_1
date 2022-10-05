@@ -25,7 +25,5 @@ jobs:
       run: |
             for file in $(find -name '*.py')
             do
-             pylint --disable=R,C,W
-             
-            "$file" --fail-under=10;    
+             pylint --disable=R,C,W "$file" --fail-under=10;    
             done
